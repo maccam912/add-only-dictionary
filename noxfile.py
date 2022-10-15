@@ -169,17 +169,17 @@ def tests(session: Session) -> None:
             session.notify("coverage", posargs=[])
 
 
-# @session(python=python_versions[0])
-# def coverage(session: Session) -> None:
-#     """Produce the coverage report."""
-#     args = session.posargs or ["report"]
+@session(python=python_versions[0])
+def coverage(session: Session) -> None:
+    """Produce the coverage report."""
+    args = session.posargs or ["report", "--fail-under=50"]
 
-#     session.install("coverage[toml]")
+    session.install("coverage[toml]")
 
-#     if not session.posargs and any(Path().glob(".coverage.*")):
-#         session.run("coverage", "combine")
+    if not session.posargs and any(Path().glob(".coverage.*")):
+        session.run("coverage", "combine")
 
-#     session.run("coverage", *args)
+    session.run("coverage", *args)
 
 
 @session(python=python_versions[0])
