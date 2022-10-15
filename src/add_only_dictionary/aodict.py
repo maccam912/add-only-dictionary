@@ -3,13 +3,13 @@ from collections import UserDict
 from typing import TypeVar
 
 
-_KT = TypeVar("_KT")
-_VT = TypeVar("_VT")
+K = TypeVar("K")
+V = TypeVar("V")
 
 
-class AODict(UserDict[_KT, _VT]):
+class AODict(UserDict[K, V]):
     """AODict class."""
 
-    def __setitem__(self, k: _KT, v: _VT) -> None:
+    def __setitem__(self, k: K, v: V) -> None:
         """__setitem__."""
         super().__setitem__(k, v)
