@@ -1,0 +1,14 @@
+{
+  "_output_dir": "C:\\Users\\macca\\dev",
+  "_template": "gh:cjolowicz/cookiecutter-hypermodern-python",
+  "author": "Matt Koski",
+  "copyright_year": "2022",
+  "development_status": "Development Status :: 3 - Alpha",
+  "email": "maccam912@gmail.com",
+  "friendly_name": "Add Only Dictionary",
+  "github_user": "maccam912",
+  "license": "MIT",
+  "package_name": "add_only_dictionary",
+  "project_name": "add-only-dictionary",
+  "version": "0.1.0"
+}
