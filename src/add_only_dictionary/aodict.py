@@ -13,5 +13,11 @@ class AODict(Dict[K, V]):
     """AODict class."""
 
     def __setitem__(self, k: K, v: V) -> None:
-        """__setitem__."""
-        super().__setitem__(k, v)
+        """Lets you add item to dict, but not if key exists.
+
+        Args:
+            k (K): the key of attempted addition
+            v (V): the value
+        """
+        if k not in self.keys():
+            super().__setitem__(k, v)
