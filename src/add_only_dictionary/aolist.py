@@ -6,10 +6,10 @@ from typing import Any
 from typing import List
 
 
-if typing.TYPE_CHECKING:
-    from typing_extensions import SupportsIndex
-else:
+if hasattr(typing, "SupportsIndex"):
     from typing import SupportsIndex
+else:
+    from typing_extensions import SupportsIndex
 
 
 class AOList(List[Any]):

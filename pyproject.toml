@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "add-only-dictionary"
-version = "0.1.4"
+version = "0.1.5"
 description = "Add Only Dictionary"
 authors = ["Matt Koski <maccam912@gmail.com>"]
 license = "MIT"
