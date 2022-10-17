@@ -38,6 +38,23 @@ def test_nested_dict() -> None:
     assert ao["a"]["c"] == 3
 
 
+def test_remove_attempt() -> None:
+    """Trying to delete a key from a dict should fail."""
+    ao: AODict = AODict()
+    ao["a"] = 1
+    del ao["a"]
+    assert ao["a"] == 1
+
+
+def test_list_methods() -> None:
+    """Trying to delete a key from a dict should fail."""
+    ao: AODict = AODict({"a": [1, 2, 3]})
+    del ao["a"]
+    assert ao["a"] == [1, 2, 3]
+    ao["a"].pop()
+    assert ao["a"] == [1, 2, 3]
+
+
 def test_json_dumps() -> None:
     """When using json.dumps on an AODict it should behave like regular dict."""
     ao: AODict = AODict()
