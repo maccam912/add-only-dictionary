@@ -7,7 +7,7 @@ from typing import Any
 from typing import List
 
 
-if typing.TYPE_CHECKING or sys.version < (3, 8):
+if typing.TYPE_CHECKING or sys.version_info < (3, 8):
     from typing_extensions import SupportsIndex
 else:
     from typing import SupportsIndex
