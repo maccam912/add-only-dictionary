@@ -1,13 +1,14 @@
 """class AODict."""
 from __future__ import annotations
 
+import typing
 from typing import Any
 from typing import List
 
 
-try:
+if typing.TYPE_CHECKING:
     from typing_extensions import SupportsIndex
-except ImportError:
+else:
     from typing import SupportsIndex
 
 

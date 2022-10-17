@@ -23,11 +23,7 @@
 
 ## Features
 
-- TODO
-
-## Requirements
-
-- TODO
+- Create dictionaries that let you continue adding key/value pairs, but never change existing values or remove existing keys. If a value is a dictionary, that will also be updated to have the same behavior. If the value is a list, items can only be added on to the list, but never removed from any position.
 
 ## Installation
 
@@ -39,9 +35,18 @@ $ pip install add-only-dictionary
 
 ## Usage
 
-Please see the [Command-line Reference] for details.
+```python
+from add_only_dictionary import AODict
 
-## Contributing
+regular_dict: Dict = {"a": 1}
+ao_dict: AODict = AODict(regular_dict)
+
+ao_dict["b"] = 2 # works!
+ao_dict["a"] = 3 # Nothing happens...
+ao_dict["a"] == 1 # True, since the key already existed.
+```
+
+<!-- ## Contributing
 
 Contributions are very welcome.
 To learn more, see the [Contributor Guide].
@@ -54,7 +59,7 @@ _Add Only Dictionary_ is free and open source software.
 ## Issues
 
 If you encounter any problems,
-please [file an issue] along with a detailed description.
+please [file an issue] along with a detailed description. -->
 
 ## Credits
 
