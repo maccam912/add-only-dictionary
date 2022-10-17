@@ -6,9 +6,7 @@ from typing import Any
 from typing import List
 
 
-if hasattr(typing, "SupportsIndex"):
-    from typing import SupportsIndex
-else:
+if typing.TYPE_CHECKING:
     from typing_extensions import SupportsIndex
 
 
