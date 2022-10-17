@@ -1,13 +1,16 @@
 """class AODict."""
 from __future__ import annotations
 
+import sys
 import typing
 from typing import Any
 from typing import List
 
 
-if typing.TYPE_CHECKING:
+if typing.TYPE_CHECKING or sys.version < (3, 8):
     from typing_extensions import SupportsIndex
+else:
+    from typing import SupportsIndex
 
 
 class AOList(List[Any]):
