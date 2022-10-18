@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "add-only-dictionary"
-version = "0.1.7"
+version = "0.1.8"
 description = "Add Only Dictionary"
 authors = ["Matt Koski <maccam912@gmail.com>"]
 license = "MIT"
@@ -9,7 +9,7 @@ homepage = "https://github.com/maccam912/add-only-dictionary"
 repository = "https://github.com/maccam912/add-only-dictionary"
 documentation = "https://add-only-dictionary.readthedocs.io"
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
 ]
 
 [tool.poetry.urls]
